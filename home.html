@@ -1,0 +1,357 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Krusty Krab</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <header>
+        <nav id="headerNavigator">
+            <div id="brandGroup">
+                <img id="KrustyKrabLogo" src="Images/KrustyKrabLogoNoBG.png" alt="The Krusty Krab logo">
+                <p id="TKKTXT">The Krusty Krab</p>
+            </div>
+
+            <div id="navLinks">
+                <a href="#Home">Home</a>
+                <a href="#homeMenuList">Menu</a>
+                <a href="#Offers">Offers</a>
+                <a href="#Testimonials">Testimonials</a>
+                <a href="#Location">Locations</a>
+                <a href="#Contact">Contact</a>
+                <a href="#About">About</a>
+            </div>
+
+            <div id="navOverflow">
+                <button id="navOverflowToggle" type="button" aria-label="More navigation options">=</button>
+                <div id="navOverflowMenu"></div>
+            </div>
+
+            <div id="navActions">
+                <div id="LogInBTN"><a href="Login.html">Log In</a></div>
+                <div id="signupBTNdiv"><a href="SignUp.html">Sign Up</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CART SIDEBAR -->
+    <div id="cartSidebarOverlay" aria-hidden="true"></div>
+    <aside id="cartSidebar" aria-label="Your cart">
+        <div id="cartSidebarHead">
+            <h2>Your Cart</h2>
+            <button id="cartSidebarClose" aria-label="Close cart">&#x2715;</button>
+        </div>
+        <div id="cartSidebarItems">
+            <p id="cartSidebarEmpty">Your cart is empty.<br>Add something delicious!</p>
+        </div>
+        <div id="cartSidebarFoot">
+            <div id="cartSidebarTotalRow">
+                <span id="cartSidebarTotalLabel">Total</span>
+                <span id="cartSidebarTotal">PHP 0.00</span>
+            </div>
+            <button id="cartSidebarCheckout" data-checkout-button>Checkout</button>
+        </div>
+    </aside>
+
+    <!-- LOGIN GATE MODAL -->
+    <div id="loginGateOverlay" aria-hidden="true">
+        <div id="loginGateModal" role="dialog" aria-modal="true" aria-labelledby="loginGateTitle">
+            <h3 id="loginGateTitle">Login Required</h3>
+            <p>You need to be logged in to add items to your cart and place an order.</p>
+            <div class="loginGateActions">
+                <a href="Login.html" class="loginGateBtn loginGatePrimary">Log In</a>
+                <button class="loginGateBtn loginGateSecondary" id="loginGateDismiss">Maybe later</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="Home">
+        <div id="homeContent">
+            <div id="homeTextBlock">
+                <h1 id="theSecretHOMETXT">The Secret<br>is in the<br>Craft</h1>
+                <p id="homeSentenceTXT">We are dedicated to providing a superior product that honors our coastal heritage while maximizing value for every guest we serve.</p>
+                <div id="GetStartedDIV">
+                    <a href="#homeMenuList" id="getStartedTXTBTN">
+                        <span>Get Started</span>
+                        <span id="getStartedArrow" aria-hidden="true">&#x2192;</span>
+                    </a>
+                </div>
+            </div>
+            <div id="homeImageWrap">
+                <img id="homeKrabyPattyImage" src="Images/Kraby Patty.png" alt="Krabby Patty">
+            </div>
+        </div>
+    </section>
+
+    <section id="Menu">
+        <div id="menuShowcase">
+            <h2 class="sectionTitle">Our Top Picks</h2>
+            <div id="topPicksGrid">
+                <a class="topPickImageCard topPickBlue" href="#homeMenuList">
+                    <img src="Images/Top picks.png" alt="Made fresh served hot Krabby Patty promo">
+                </a>
+                <a class="topPickImageCard topPickOrange" href="#homeMenuList">
+                    <img src="Images/Top picks full.png" alt="Loaded double Krabby burgers promo">
+                </a>
+                <a class="topPickImageCard topPickGreen" href="#homeMenuList">
+                    <img src="Images/Top picks 1.png" alt="Super triple Krabby Patty promo">
+                </a>
+            </div>
+
+            <h2 class="sectionTitle menuSectionTitle" id="homeMenuList">Menu</h2>
+            <div id="menuCards">
+                <article class="menuCard">
+                    <img src="Images/Triple Kraby Patty.png" alt="Triple Krabby Patty">
+                    <div class="menuCardBody">
+                        <h3>Triple Krabby Patty</h3>
+                        <p class="menuSubtitle">Signature Burger</p>
+                        <p class="menuMeta">1150 KCAL</p>
+                        <div class="menuCardFooter">
+                            <span class="menuPrice">PHP 249.00</span>
+                            <button class="menuAddButton" type="button" aria-label="Add Triple Krabby Patty">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="menuCard">
+                    <img src="Images/Double Kraby Patty.png" alt="Double Krabby Patty">
+                    <div class="menuCardBody">
+                        <h3>Double Krabby Patty</h3>
+                        <p class="menuSubtitle">Signature Burger</p>
+                        <p class="menuMeta">850 KCAL</p>
+                        <div class="menuCardFooter">
+                            <span class="menuPrice">PHP 199.00</span>
+                            <button class="menuAddButton" type="button" aria-label="Add Double Krabby Patty">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="menuCard">
+                    <img src="Images/Kraby Patty.png" alt="Krabby Patty">
+                    <div class="menuCardBody">
+                        <h3>Krabby Patty</h3>
+                        <p class="menuSubtitle">Signature Burger</p>
+                        <p class="menuMeta">550 KCAL</p>
+                        <div class="menuCardFooter">
+                            <span class="menuPrice">PHP 149.00</span>
+                            <button class="menuAddButton" type="button" aria-label="Add Krabby Patty">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <a id="viewFullMenuButton" href="menu.html">View Full Menu</a>
+        </div>
+    </section>
+
+    <section id="Order" class="infoSection infoSectionAccent">
+        <div class="infoSectionShell orderShell">
+            <div class="infoSectionIntro">
+                <p class="eyebrowLabel">Fast service, Bikini Bottom style</p>
+                <h2 class="infoSectionTitle">Order your Krusty Krab favorites in minutes</h2>
+                <p class="infoSectionText">Pick your cravings, build your combo, and enjoy the same legendary flavor our regulars keep coming back for.</p>
+            </div>
+            <div class="infoCardGrid orderGrid">
+                <article class="infoCard"><h3>Dine In</h3><p>Grab a fresh tray and enjoy the full Krusty Krab atmosphere with your crew.</p></article>
+                <article class="infoCard"><h3>Take Out</h3><p>Need it quick? We'll pack your order hot, sealed, and ready for the road.</p></article>
+                <article class="infoCard"><h3>Party Bundles</h3><p>Feed the whole boat with burger bundles, kelp fries, and drinks for sharing.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section id="Offers">
+        <div class="infoSectionShell">
+            <div class="infoSectionIntro centeredIntro">
+                <p class="eyebrowLabel">Best-value combos</p>
+                <h2 class="infoSectionTitle">Offers worth diving into</h2>
+                <p class="infoSectionText">These crowd favorites are built to give guests more flavor, more sides, and more value in every order.</p>
+            </div>
+            <div class="promoGrid">
+                <article class="promoCard promoCardWarm" data-offer-name="Patty Duo Meal" data-unit-price="349">
+                    <span class="promoBadge">Most Popular</span>
+                    <h3>Patty Duo Meal</h3>
+                    <p>1 Double Krabby Patty, kelp fries, and 2 drinks for a shareable meal deal.</p>
+                    <ul class="promoBundleList">
+                        <li>Double Krabby Patty</li>
+                        <li>Kelp Fries</li>
+                        <li>2 Soft Drinks</li>
+                    </ul>
+                    <div class="promoCardFooter">
+                        <div class="menuQtyControls promoQtyControls">
+                            <button type="button" aria-label="Decrease quantity">-</button>
+                            <span>1</span>
+                            <button type="button" aria-label="Increase quantity">+</button>
+                        </div>
+                        <strong class="menuProductPrice promoPrice" data-unit-price="349">PHP 349.00</strong>
+                    </div>
+                    <button type="button" class="promoCartButton">Add offer</button>
+                </article>
+                <article class="promoCard promoCardSea" data-offer-name="Captain's Bundle" data-unit-price="699">
+                    <span class="promoBadge">Family Pick</span>
+                    <h3>Captain's Bundle</h3>
+                    <p>2 Krabby Patties, 1 shrimp basket, 2 fries, and 4 drinks for the whole crew.</p>
+                    <ul class="promoBundleList">
+                        <li>2 Krabby Patties</li>
+                        <li>Shrimp Basket</li>
+                        <li>2 Kelp Fries</li>
+                        <li>4 Drinks</li>
+                    </ul>
+                    <div class="promoCardFooter">
+                        <div class="menuQtyControls promoQtyControls">
+                            <button type="button" aria-label="Decrease quantity">-</button>
+                            <span>1</span>
+                            <button type="button" aria-label="Increase quantity">+</button>
+                        </div>
+                        <strong class="menuProductPrice promoPrice" data-unit-price="699">PHP 699.00</strong>
+                    </div>
+                    <button type="button" class="promoCartButton">Add offer</button>
+                </article>
+                <article class="promoCard promoCardGold" data-offer-name="Kelp Shake Combo" data-unit-price="189">
+                    <span class="promoBadge">Limited Time</span>
+                    <h3>Kelp Shake Combo</h3>
+                    <p>Any signature burger plus a Kelp Shake with a combo discount that keeps things sweet.</p>
+                    <ul class="promoBundleList">
+                        <li>Krabby Patty</li>
+                        <li>Kelp Shake</li>
+                        <li>Combo savings included</li>
+                    </ul>
+                    <div class="promoCardFooter">
+                        <div class="menuQtyControls promoQtyControls">
+                            <button type="button" aria-label="Decrease quantity">-</button>
+                            <span>1</span>
+                            <button type="button" aria-label="Increase quantity">+</button>
+                        </div>
+                        <strong class="menuProductPrice promoPrice" data-unit-price="189">PHP 189.00</strong>
+                    </div>
+                    <button type="button" class="promoCartButton">Add offer</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="Testimonials">
+        <div class="infoSectionShell">
+            <div class="infoSectionIntro centeredIntro">
+                <p class="eyebrowLabel">Guest favorites</p>
+                <h2 class="infoSectionTitle">What Bikini Bottom is saying</h2>
+                <p class="infoSectionText">From first bites to loyal regulars, these reviews capture what makes the Krabby Patty experience stand out.</p>
+            </div>
+            <div class="testimonialGrid">
+                <article class="testimonialCard">
+                    <p class="testimonialQuote">"The patties are always hot, juicy, and served fast. This is my go-to lunch stop every single week."</p>
+                    <div class="testimonialMeta">
+                        <div class="testimonialAvatar">S</div>
+                        <div><strong>Sandy Cheeks</strong><span>Coral Reef Researcher</span></div>
+                    </div>
+                </article>
+                <article class="testimonialCard">
+                    <p class="testimonialQuote">"I came for the fries and stayed for the combo deals. The portions are solid and the flavor never misses."</p>
+                    <div class="testimonialMeta">
+                        <div class="testimonialAvatar">P</div>
+                        <div><strong>Patrick Star</strong><span>Neighborhood regular</span></div>
+                    </div>
+                </article>
+                <article class="testimonialCard">
+                    <p class="testimonialQuote">"Clean place, friendly crew, and the best burger in town. It feels like a classic every time."</p>
+                    <div class="testimonialMeta">
+                        <div class="testimonialAvatar">P</div>
+                        <div><strong>Pearl Krabs</strong><span>Weekend diner</span></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section id="Location">
+        <div class="infoSectionShell">
+            <div class="infoSectionIntro">
+                <p class="eyebrowLabel">Visit us</p>
+                <h2 class="infoSectionTitle">Locations built for easy drop-ins</h2>
+                <p class="infoSectionText">Whether you're grabbing lunch, meeting friends, or picking up dinner, we've got a spot ready for you.</p>
+            </div>
+            <div class="locationGrid">
+                <article class="locationCard">
+                    <div class="locationIcon">&#128205;</div>
+                    <h3>Downtown Bikini Bottom</h3>
+                    <p>Anchovy Avenue, beside Goo Lagoon Express</p>
+                    <span>Open daily: 9:00 AM &#8211; 10:00 PM</span>
+                </article>
+                <article class="locationCard">
+                    <div class="locationIcon">&#128205;</div>
+                    <h3>Coral Street Branch</h3>
+                    <p>Shell Square, near Jellyfish Fields terminal</p>
+                    <span>Open daily: 10:00 AM &#8211; 11:00 PM</span>
+                </article>
+                <article class="locationCard">
+                    <div class="locationIcon">&#128205;</div>
+                    <h3>Seaside Market Kiosk</h3>
+                    <p>Harbor Walk, food strip lane 3</p>
+                    <span>Open daily: 8:00 AM &#8211; 8:00 PM</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="Contact">
+        <div class="infoSectionShell">
+            <div class="infoSectionIntro">
+                <p class="eyebrowLabel">Stay connected</p>
+                <h2 class="infoSectionTitle">Contact the Krusty Krab team</h2>
+                <p class="infoSectionText">Need catering details, order support, or a quick answer from our crew? Reach out through any of the channels below.</p>
+            </div>
+            <div class="contactGrid">
+                <article class="contactCard">
+                    <div class="contactIconWrap">&#128222;</div>
+                    <h3>Call us</h3>
+                    <a href="tel:+639123456789">+63 912 345 6789</a>
+                </article>
+                <article class="contactCard">
+                    <div class="contactIconWrap">&#9993;&#65039;</div>
+                    <h3>Email</h3>
+                    <a href="mailto:hello@krustykrab.com">hello@krustykrab.com</a>
+                </article>
+                <article class="contactCard">
+                    <div class="contactIconWrap">&#127754;</div>
+                    <h3>Socials</h3>
+                    <p>@TheKrustyKrab on your favorite platforms</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="About">
+        <div class="infoSectionShell">
+            <div class="infoSectionIntro">
+                <p class="eyebrowLabel">Our story</p>
+                <h2 class="infoSectionTitle">A burger spot built on craft and consistency</h2>
+                <p class="infoSectionText">The Krusty Krab is all about serving food that feels familiar, satisfying, and memorable. We focus on fresh preparation, fast service, and a signature flavor guests can trust.</p>
+            </div>
+            <div class="aboutHighlights">
+                <article class="aboutHighlightCard">
+                    <div class="aboutHighlightNum">01</div>
+                    <strong>Freshly prepared</strong>
+                    <p>Every burger is assembled to order so the texture and flavor stay right where they should be.</p>
+                </article>
+                <article class="aboutHighlightCard">
+                    <div class="aboutHighlightNum">02</div>
+                    <strong>Guest-first service</strong>
+                    <p>From quick pickups to family meals, the team is trained to keep each visit smooth and friendly.</p>
+                </article>
+                <article class="aboutHighlightCard">
+                    <div class="aboutHighlightNum">03</div>
+                    <strong>Iconic flavors</strong>
+                    <p>Classic burgers, seafood favorites, and sweet treats all carry the same unmistakable Krusty Krab style.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="project.js"></script>
+</body>
+
+</html>

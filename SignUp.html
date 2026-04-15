@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | The Krusty Krab</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <header>
+        <nav id="headerNavigator">
+            <div id="brandGroup">
+                <img id="KrustyKrabLogo" src="Images/KrustyKrabLogoNoBG.png" alt="The Krusty Krab logo">
+                <p id="TKKTXT">The Krusty Krab</p>
+            </div>
+
+            <div id="navLinks">
+                <a href="home.html#Home">Home</a>
+                <a href="home.html#homeMenuList">Menu</a>
+                <a href="home.html#Offers">Offers</a>
+                <a href="home.html#Testimonials">Testimonials</a>
+                <a href="home.html#Location">Locations</a>
+                <a href="home.html#Contact">Contact</a>
+                <a href="home.html#About">About</a>
+            </div>
+
+            <div id="navOverflow">
+                <button id="navOverflowToggle" type="button" aria-label="More navigation options">=</button>
+                <div id="navOverflowMenu"></div>
+            </div>
+
+            <div id="navActions">
+                <div id="LogInBTN"><a href="Login.html">Log In</a></div>
+                <div id="signupBTNdiv">
+                    <a href="SignUp.html" class="signup-active">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mainContainerSignUp">
+        <div id="SignUpDIV">
+            <div id="leftInsideSignUPDIV"><img id="KrustySignUPLOGO" src="Images/KrustyKrabLogoNoBG.png" alt="">
+                <pre id="WelcomeTXTsignup">Welcome to the Krusty Krab</pre>
+                <pre id="bottomTXTsignup">Home of the Famous Krabby Patty</pre>
+            </div>
+
+            <p id="SignUPTXT">SIGNUP</p>
+            <form action="">
+                <ul id="userInput" type="none">
+                    <li id="nameLI">
+                        <label id="nameTXT" for="Name">Name</label><br>
+                        <input type="text" id="Nama" autocomplete="name">
+                    </li>
+                    <li>
+                        <label id="emailTXT" for="Email">Email</label><br>
+                        <input type="email" id="Email" autocomplete="email">
+                    </li>
+                    <li>
+                        <label id="ContactNumberTXT" for="Number">Contact Number</label><br>
+                        <input type="text" id="Number" autocomplete="tel">
+                    </li>
+                    <li>
+                        <label id="passwordTXT" for="Password">Password</label><br>
+                        <input type="password" id="Password" autocomplete="new-password">
+                    </li>
+                    <li>
+                        <label id="confirmPasswordTXT" for="CPassword">Confirm Password</label><br>
+                        <input type="password" id="ConfirmPassword" autocomplete="new-password">
+                    </li>
+                    <li><input id="tacCheckbox" type="checkbox"><a href="#"><label id="tacTXT" for="">Terms and Conditions</label></a></li>
+                    <li id="SignUPBTNLI">
+                        <button type="submit" id="signUpBTNDIVpage">Sign Up</button>
+                    </li>
+                    <li>
+                        <p id="signuptoLoginTXT">Already have an account? </p> <a id="signUptoLoginlink" href="Login.html">Log In</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+
+</html>
